@@ -15,33 +15,26 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+This module was created to manage filesystem mountpoints for Linux servers. 
+It was created to give a resource to manage the lvm and fstab entries and 
+mount it in one complete module.
 
 ## Module Description
 
-If applicable, this section should have a brief description of the technology
-the module integrates with and what that integration enables. This section
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?"
-
-If your module has a range of functionality (installation, configuration,
-management, etc.) this is the time to mention it.
+It was created to give a resource to manage the lvm and fstab entries and 
+mount it in one complete module. This module only uses modules AlexCline/fstab,
+AlexCline/mounts and a few others as dependencies. I will try to remove external
+dependencies if and whenever possible.
 
 ## Setup
 
 ### What mount affects
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+* This module modifies the /etc/fstab file and will run the mount command.
 
 ### Setup Requirements **OPTIONAL**
 
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
+You should have a extra disk or disks available or have a current volume group available.
 
 ### Beginning with mount
 
@@ -53,19 +46,21 @@ for upgrading, you may wish to include an additional section here: Upgrading
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+  mount::create::mnt_point {"/mymount":
+    lvol  => "lvol0",
+    vg    => "vg01",
+    pvol    => "/dev/sdb",
+    size  => "4G",
+  }
+
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
+Users should import mount::create class
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Tested on Debian and RedHat platforms
 
 ## Development
 
