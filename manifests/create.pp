@@ -1,5 +1,5 @@
 class mount::create {
-  define mount($lvol,$vg,$pvol,$fstype="ext4",$size,$mnt_opts="defaults",$dump="0",$passno="0") {
+  define mnt_point($lvol,$vg,$pvol,$fstype="ext4",$size,$mnt_opts="defaults",$dump="0",$passno="0") {
     lvm::volume { $lvol:
       ensure => present,
       vg     => "$vg",
