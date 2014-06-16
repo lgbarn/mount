@@ -54,18 +54,10 @@ for upgrading, you may wish to include an additional section here: Upgrading
   }
 
 
-## Reference
-
-Users should import mount::create class
-
 ## Limitations
 
 Tested on Debian and RedHat platforms
 
-## Development
-
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
 
 ## Release Notes/Contributors/Etc **Optional**
 
