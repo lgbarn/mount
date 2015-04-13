@@ -1,15 +1,15 @@
 {
   "name": "lgbarn-mount",
   "version": "0.1.0",
-  "author": "lgbarn",
+  "author": "Luther Barnum",
   "summary": "Manage volume group and mount",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "source": "",
   "issues_url": null,
   "project_page": null,
   "dependencies": [
     {
-      "version_range": ">= 1.0.0",
+      "version_range": "4.0.0 >= 3.0.0 ",
       "name": "puppetlabs-stdlib"
     }
   ]

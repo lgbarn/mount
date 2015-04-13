@@ -1,0 +1,9 @@
+fixtures:
+  forge_modules:
+    "stdlib": "puppetlabs/stdlib"
+    "lvm": "puppetlabs/lvm"
+#    "staging": "https://github.com/nanliu/puppet-staging"
+    "fstab": "AlexCline/fstab"
+    "mounts": "AlexCline/mounts"
+  symlinks:
+    "mount": "#{source_dir}"
