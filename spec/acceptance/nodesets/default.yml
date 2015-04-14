@@ -1,0 +1,8 @@
+HOSTS:
+  centos-66-x64:
+    roles:
+      - master
+    platform: el-6-x86_64
+    box: mycentos-6.5-nocm
+    box_url: file:///home/lgbarn/vboxes/mycentos-6.5-nocm
+    hypervisor: vagrant
