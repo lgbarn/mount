@@ -23,6 +23,10 @@ RSpec.configure do |c|
     puppet_module_install(:source => proj_root, :module_name => 'mount', :target_module_path => '/etc/puppet/modules/')
     hosts.each do |host|
       on host, puppet('module install puppetlabs-stdlib -i /etc/puppet/modules/'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install puppetlabs-lvm -i /etc/puppet/modules/'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install nanliu-staging -i /etc/puppet/modules/'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install AlexCline-fstab -i /etc/puppet/modules/'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module install AlexCline-mounts -i /etc/puppet/modules/'), { :acceptable_exit_codes => [0,1] }
     end
   end
 end
