@@ -1,8 +1,10 @@
 HOSTS:
   centos-66-x64:
+    pre-boot:
+      - modifyvm", :id, "--cpus", 2
     roles:
       - master
     platform: el-6-x86_64
-    box: mycentos-6.5-nocm
-    box_url: file:///home/lgbarn/vboxes/mycentos-6.5-nocm
+    box: centos-6.6-64-nocm-extra-disks
+    #box_url: file:///home/lgbarn/vboxes/mycentos-6.5-nocm
     hypervisor: vagrant
